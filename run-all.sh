@@ -1,14 +1,17 @@
 #!/bin/sh
 
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+
 # Install Stow
-./install-stow.sh
+"${SCRIPT_DIR}/install-stow.sh"
+"${SCRIPT_DIR}/install-rsync.sh"
 
 # JavaScript
-./install-javascript.sh
+"${SCRIPT_DIR}/install-javascript.sh"
 
 # Shell
-./install-atuin.sh
-./install-zsh.sh
+"${SCRIPT_DIR}/install-atuin.sh"
+"${SCRIPT_DIR}/install-zsh.sh"
 
 # JetBrains
-./install-jetbrains.sh
+"${SCRIPT_DIR}/install-jetbrains.sh"
