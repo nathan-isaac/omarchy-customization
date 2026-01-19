@@ -6,6 +6,8 @@
 
 ./install-atuin.sh
 
+./install-jetbrains.sh
+
 ./install-zsh.sh
 
 
