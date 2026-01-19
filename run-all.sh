@@ -9,6 +9,9 @@ SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 # JavaScript
 "${SCRIPT_DIR}/install-javascript.sh"
 
+# AI
+"${SCRIPT_DIR}/install-claude.sh"
+
 # Shell
 "${SCRIPT_DIR}/install-atuin.sh"
 "${SCRIPT_DIR}/install-zsh.sh"
