@@ -12,6 +12,7 @@ SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 # Shell
 "${SCRIPT_DIR}/install-atuin.sh"
 "${SCRIPT_DIR}/install-zoxide.sh"
+"${SCRIPT_DIR}/install-fzf.sh"
 "${SCRIPT_DIR}/install-zsh.sh"
 
 # JetBrains

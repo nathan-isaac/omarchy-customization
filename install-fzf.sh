@@ -2,20 +2,18 @@
 
 set -e
 
-# https://github.com/ajeetdsouza/zoxide
-
-mise use --global zoxide
+omarchy-pkg-add fzf
 
 ZSHRC="${HOME}/.zshrc"
-MARKER="# zoxide init (managed by omarchy-customization)"
+MARKER="# fzf init (managed by omarchy-customization)"
 
 if [ -f "$ZSHRC" ] && ! grep -qF "$MARKER" "$ZSHRC"; then
     cat >> "$ZSHRC" <<'EOF'
 
-# zoxide init (managed by omarchy-customization)
+# fzf init (managed by omarchy-customization)
 # Zsh specific - check if shell is interactive
 if [[ -o interactive ]]; then
-    eval "$(zoxide init --cmd cd zsh)"
+    eval "$(fzf --zsh)"
 fi
 EOF
 fi
