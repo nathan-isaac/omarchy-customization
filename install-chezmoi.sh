@@ -1,5 +1,5 @@
 #!/bin/sh
 
+# Not decided if I should use this or stow.
 # https://www.chezmoi.io/install
-pacman -S chezmoi
-
+omarchy-pkg-add chezmoi
