@@ -7,7 +7,6 @@ omarchy-pkg-add omarchy-zsh
 omarchy-pkg-add zsh-syntax-highlighting
 omarchy-pkg-add zsh-autosuggestions
 omarchy-pkg-add zsh-completions
-omarchy-pkg-aur-add zsh-vi-mode
 omarchy-pkg-aur-add fzf-tab-git
 
 # omarchy-setup-zsh
@@ -22,8 +21,9 @@ if [ -f "$ZSHRC" ] && ! grep -qF "$MARKER" "$ZSHRC"; then
 if [[ -o interactive ]]; then
     autoload -Uz compinit && compinit
 
+    bindkey -v
+
     source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-    source /usr/share/zsh/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh
     source /usr/share/zsh/plugins/fzf-tab-git/fzf-tab.plugin.zsh
 
     zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
